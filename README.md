@@ -1,47 +1,77 @@
 # Bass Emulator Android App
 
 ## Sobre o Projeto
-Um emulador de contra-baixo desenvolvido para Android, inspirado no [Real Bass](https://play.google.com/store/apps/details?id=br.com.rodrigokolb.realbass). O projeto foca na interface e interatividade, permitindo aos usuários simular a experiência de tocar um baixo com feedback visual e sonoro realista.
+Um emulador de contra-baixo desenvolvido para Android, inspirado no [Real Bass](https://play.google.com/store/apps/details?id=br.com.rodrigokolb.realbass). O projeto é uma implementação sofisticada que combina interatividade precisa, feedback visual realista e controle de áudio.
 
 ## Funcionalidades Principais
 - 🎸 Interface completa do braço do baixo com 22 trastes
-- 🎵 4 cordas com sons distintos (G, D, A, E)
-- 🎯 Feedback visual ao tocar com animações personalizadas
-- 🔄 Sistema de navegação pelo braço com controle de posição
-- 🎨 Design customizado com assets próprios
+- 🎵 4 cordas com sons distintos (G, D, A, E) e espessuras diferentes
+- 🎯 Sistema de feedback visual com:
+  - Animações personalizadas de vibração das cordas
+  - Efeitos de toque com cores específicas para cada corda
+  - Indicadores visuais de posicionamento
+- 🔄 Sistema de navegação intuitivo pelo braço com:
+  - Controle de posição via palheta deslizante
+  - Ajuste dinâmico da escala dos trastes
+  - Transições suaves entre posições
+- 🎚️ Controles avançados de execução:
+  - Botão de Sustain para controle da duração das notas
+  - Função Stop All para interrupção imediata
+  - Resposta tátil ao toque nas cordas
 
 ## Tecnologias Utilizadas
-- **Linguagem**: Kotlin
-- **Custom Views**: Implementação de views personalizadas para o braço do baixo e cordas
-- **Arquitetura**: MVVM + Clean Architecture
+- **Linguagem**: Kotlin + XML
+- **Custom Views**: 
+  - Implementação de views personalizadas
+  - Sistema próprio de renderização e animação
+  - Gerenciamento de estados visuais
+- **Arquitetura**: 
+  - MVVM + Clean Architecture
+  - Gerenciamento de estados com LiveData
+  - Coroutines para operações assíncronas
 - **Injeção de Dependência**: Koin
-- **Audio**: Android SoundPool
-- **Animações**: Custom animations e efeitos visuais
+- **Audio**: Android SoundPool com gerenciamento de estados
+- **Animações**: Sistema customizado de animações com ValueAnimator
 
 ## Destaques Técnicos
-- Implementação de Custom Views Android com cálculos complexos de posicionamento e escala
-- Sistema de áudio otimizado para reprodução de sons
-- Animações suaves e responsivas para feedback visual
-- Gerenciamento eficiente de recursos de memória e ciclo de vida
-- Clean Architecture para melhor manutenibilidade e testabilidade
+- Sistema complexo de Custom Views Android com:
+  - Cálculos precisos de posicionamento e escala
+  - Gerenciamento de touch events multitoque
+  - Sistema próprio de feedback visual
+- Sistema de áudio otimizado com:
+  - Controle granular de reprodução
+  - Gerenciamento de estados de sustain
+  - Transições suaves entre notas
+- Animações sofisticadas com:
+  - Sistema próprio de vibração de cordas
+  - Efeitos visuais responsivos
+  - Controle preciso de estados de animação
+- Arquitetura robusta com:
+  - Gerenciamento eficiente de estados
+  - Separação clara de responsabilidades
+  - Alta testabilidade e manutenibilidade
 
 ## Desafios e Soluções
-1. **Precisão no Posicionamento**
-   - Cálculos detalhados para mapear toques na tela para posições exatas nos trastes
-   - Sistema de ajuste dinâmico para diferentes tamanhos de tela
 
-2. **Performance das Animações**
-   - Otimização de renderização com técnicas de canvas customizado
-   - Gerenciamento eficiente de objetos para evitar GC overhead
+1. **Precisão no Posicionamento e Escala**
+   - Implementação de sistema de cálculo de trastes
+   - Ajuste automático de escala baseado na posição
+   - Mapeamento preciso de toques para notas
 
-3. **Latência de Áudio**
-   - Implementação de sistema de pré-carregamento de sons
-   - Uso otimizado do SoundPool para resposta instantânea
+2. **Gerenciamento de Estados de Áudio e Animação**
+   - Sistema de estados para sustain
+   - Coordenação entre feedback visual e áudio
+   - Controle granular de animações das cordas
 
-4. **Arquitetura Escalável**
-   - Separação clara de responsabilidades com Clean Architecture
-   - Uso de UseCases para encapsular regras de negócio
-   - Sistema de estados bem definido para gerenciamento de UI
+3. **Performance e Responsividade**
+   - Otimização de renderização e animações
+   - Sistema de gerenciamento de recursos
+   - Minimização de alocações de objetos
+
+4. **Arquitetura e Manutenibilidade**
+   - Implementação de Clean Architecture
+   - Sistema modular e extensível
+   - Componentes reutilizáveis e testáveis
 
 ## Arquitetura
 
