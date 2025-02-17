@@ -1,7 +1,7 @@
 # Bass Emulator Android App
 
 ## Sobre o Projeto
-Um emulador de contra-baixo desenvolvido para Android, inspirado no [Real Bass](https://play.google.com/store/apps/details?id=br.com.rodrigokolb.realbass). O projeto é uma implementação sofisticada que combina interatividade precisa, feedback visual realista e controle de áudio.
+Um emulador de contra-baixo desenvolvido para Android, inspirado no [Real Bass](https://play.google.com/store/apps/details?id=br.com.rodrigokolb.realbass). O projeto é uma implementação que combina interatividade precisa, feedback visual realista e controle de áudio.
 
 https://github.com/user-attachments/assets/5ce5d6b4-181f-4055-b739-5313f6c0b4eb
 
@@ -12,11 +12,11 @@ https://github.com/user-attachments/assets/5ce5d6b4-181f-4055-b739-5313f6c0b4eb
   - Animações personalizadas de vibração das cordas
   - Efeitos de toque com cores específicas para cada corda
   - Indicadores visuais de posicionamento
-- 🔄 Sistema de navegação intuitivo pelo braço com:
+- 🔄 Sistema de navegação pelo braço com:
   - Controle de posição via palheta deslizante
   - Ajuste dinâmico da escala dos trastes
   - Transições suaves entre posições
-- 🎚️ Controles avançados de execução:
+- 🎚️ Controle de execução:
   - Botão de Sustain para controle da duração das notas
   - Função Stop All para interrupção imediata
   - Resposta tátil ao toque nas cordas
